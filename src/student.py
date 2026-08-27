@@ -1,4 +1,4 @@
-from src.school import User
+from src.user import User
 
 
 class Student(User):

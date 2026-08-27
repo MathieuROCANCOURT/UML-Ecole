@@ -1,7 +1,7 @@
 | Elément | Description |
 | --- | --- |
 | Nom du cas d’utilisation | Visiter le site |
-| But / Objectif | Pouvoir accéder à l'acceuil du site |
+| But / Objectif | Pouvoir accéder à l'accueil du site |
 | Acteur principal | Invité |
 | Acteur secondaire |  |
 | Préconditions | Avoir l'accès au site |

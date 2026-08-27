@@ -1,12 +1,10 @@
 | Elément | Description |
 | --- | --- |
-| Nom du cas d’utilisation | Créé les comptes |
+| Nom du cas d’utilisation | Créer les comptes |
 | But / Objectif | Ajouter un directeur |
 | Acteur principal | Admin |
 | Acteur secondaire | Directeur |
-| Préconditions | Ne pas avoir encore créé le directeur |
-| Scénario principal | L'écran affiche la liste des directeurs |
-|  | L'admin écris le nom du directeur qu'il veut ajouter |
-| Scénarios alternatifs | Ajout d'un directeur déjà créé ->  message d'erreur |
-| Postconditions | Le directeur est créé |
-|  | L'écran affiche la liste des directeurs |
+| Préconditions | Le directeur n'existe pas encore dans le système. |
+| Scénario principal | <ol><li>L'écran affiche la liste des directeurs.</li><li>L'admin clique sur « Ajouter un directeur ».</li><li>L'admin saisit les informations du directeur.</li><li>L'admin valide la création du compte.</li><li>Le système enregistre le nouveau directeur.</li></ol> |
+| Scénarios alternatifs | <ul><li>Le directeur existe déjà : affichage d'un message d'erreur.</li><li>Certaines informations sont manquantes : affichage d'un message d'erreur.</li></ul> |
+| Postconditions | <ul><li>Le directeur est créé.</li><li>L'écran affiche la liste des directeurs mise à jour.</li></ul> |

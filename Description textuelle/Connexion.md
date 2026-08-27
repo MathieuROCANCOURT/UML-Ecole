@@ -1,16 +1,10 @@
 | Elément | Description |
 | --- | --- |
 | Nom du cas d’utilisation | Connexion |
-| But / Objectif | Se connecter à se compte |
-| Acteur principal | Elève |
-|  | Enseignant |
-|  | Directeur |
-|  | Secrétaire |
+| But / Objectif | Se connecter à son compte |
+| Acteur principal | <ul><li>Élève</li><li>Enseignant</li><li>Directeur</li><li>Secrétaire</li></ul> |
 | Acteur secondaire | Admin |
 | Préconditions | Avoir un compte |
-| Scénario principal | L'utilisateur clique sur "Se connecter" |
-|  | L'utilisateur clique sur sa catégorie (élève, enseignant, directeur ou secrétaire) |
-|  | L'utilisateur saisie le bon nom d'utilisateur |
-|  | L'utilisateur saisie le bon mot de passe |
-| Scénarios alternatifs | Mauvaise saisie de nom d'utilisateur ou mot de passe -> message d'erreur |
-| Postconditions | L'utilisateur est connecter |
+| Scénario principal | <ol><li>L'utilisateur clique sur « Se connecter ».</li><li>L'utilisateur sélectionne sa catégorie (élève, enseignant, directeur ou secrétaire).</li><li>L'utilisateur saisit son nom d'utilisateur.</li><li>L'utilisateur saisit son mot de passe.</li><li>Le système authentifie l'utilisateur.</li></ol> |
+| Scénarios alternatifs | <ul><li>Nom d'utilisateur incorrect : affichage d'un message d'erreur.</li><li>Mot de passe incorrect : affichage d'un message d'erreur.</li><li>L'utilisateur peut réessayer la connexion.</li></ul> |
+| Postconditions | L'utilisateur est connecté. |

@@ -10,5 +10,5 @@
 | Préconditions | Etre connecter sur son compte |
 | Scénario principal | L'utilisateur clique sur "Mettre à jour" |
 |  | L'utilisateur saisie son adresse(rue, ville, code postal) |
-| Scénarios alternatifs | Ne pas avoir un compte élève-> renvoie à la page connexion |
+| Scénarios alternatifs | Ne pas avoir un compte-> renvoie à la page connexion |
 | Postconditions | L'utilisateur a mis à jour son compte |

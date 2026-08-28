@@ -1,4 +1,4 @@
-from xmlrpc.client import DateTime
+from datetime import date
 
 from address import Address
 from student import Student
@@ -19,12 +19,12 @@ class Secretary:
     def is_connected(self, value):
         self.__is_connected = ~self.__is_connected
 
-    def create_teacher_account(self, first_name: str, last_name: str, date_of_birth: DateTime, address: Address,
-                               arrival_date: DateTime):
+    def create_teacher_account(self, first_name: str, last_name: str, date_of_birth: date, address: Address,
+                               arrival_date: date):
         if self.__is_connected:
             Teacher(first_name, last_name, date_of_birth, address, arrival_date)
 
-    def create_student_account(self, first_name: str, last_name: str, date_of_birth: DateTime, address: Address):
+    def create_student_account(self, first_name: str, last_name: str, date_of_birth: date, address: Address):
         if self.__is_connected:
             Student(first_name, last_name, date_of_birth, address)
 

@@ -6,7 +6,7 @@ from teacher import Teacher
 
 class Courses:
     def __init__(self):
-        self.list_courses = []
+        self.list_courses: list[Course] = []
 
     def add_course(self, name: str, start_date: date, end_date: date, teacher: Teacher):
         self.list_courses.append(Course(name, start_date, end_date, teacher))

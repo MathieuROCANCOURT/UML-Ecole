@@ -1,6 +1,7 @@
 from datetime import date
 
 from src.address import Address
+from src.courses import Courses
 from src.user import User
 import itertools
 
@@ -16,6 +17,7 @@ class Student(User):
         self.last_name = last_name
         self.date_of_birth = date_of_birth
         self.address = address
+        self.list_courses = Courses().list_courses
 
     def update_account(self, address: Address):
         self.address = address
@@ -30,3 +32,9 @@ class Student(User):
             return gap_year - 1
 
         return gap_year
+
+    def display_courses(self):
+        for course in self.list_courses:
+            for student in course.list_student:
+                if student == self:
+                    print(course)

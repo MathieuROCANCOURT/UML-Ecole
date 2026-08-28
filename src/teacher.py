@@ -15,7 +15,7 @@ class Teacher(User):
         self.date_of_birth = date_of_birth
         self.address = address
         self.arrival_date = arrival_date
-        self.list_courses = Courses()
+        self.list_courses = Courses().list_courses
 
     def update_account(self, address: Address):
         self.address = address
@@ -31,5 +31,7 @@ class Teacher(User):
 
         return gap_year
 
-    def add_course(self):
-        self.list_courses.add_course("Grecque", date(2026, 9, 1), date(2026, 9, 21), self)
+    def display_courses(self):
+        for course in self.list_courses:
+            if course.teacher == self:
+                print(course)

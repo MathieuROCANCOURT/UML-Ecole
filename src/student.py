@@ -1,6 +1,11 @@
 from src.address import Address
 
 from src.user import User
+import itertools
+
+
+class Resource:
+    _id_counter = itertools.count(1)  # Start from 1
 
 
 class Student(User):
@@ -11,7 +16,7 @@ class Student(User):
         self.last_name = last_name
         self.age = age
         self.address = address
+        self.id = next(Resource._id_counter)
 
     def update_account(self, address: Address):
         self.address = address
-

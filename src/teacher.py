@@ -20,6 +20,12 @@ class Teacher(User):
         self.address = address
 
     def calculate_age(self):
-        today = date.today()
-        age = today.year - self.date_of_birth.year
-        return age
+        gap_year = date.today().year - self.date_of_birth.year
+
+        if date.today().month > self.date_of_birth.month:
+            return gap_year - 1
+
+        if date.today().month == self.date_of_birth.month and date.today().day > self.date_of_birth.day:
+            return gap_year - 1
+
+        return gap_year

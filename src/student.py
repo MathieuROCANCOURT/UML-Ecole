@@ -11,3 +11,7 @@ class Student(User):
         self.last_name = last_name
         self.age = age
         self.address = address
+
+    def update_account(self, address: Address):
+        self.address = address
+

@@ -17,6 +17,9 @@ class Teacher(User):
         self.arrival_date = arrival_date
         self.list_courses = Courses().list_courses
 
+    def display_name(self) -> str:
+        return self.last_name + ' ' + self.first_name
+
     def update_account(self, address: Address):
         self.address = address
 

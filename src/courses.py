@@ -8,6 +8,14 @@ class Courses:
     def __init__(self):
         self.list_courses: list[Course] = []
 
+    def __str__(self) -> str:
+        display: str = "------ Voici la liste des cours ---------"
+
+        for course in self.list_courses:
+            display += course.__str__()
+
+        return display
+
     def add_course(self, name: str, start_date: date, end_date: date, teacher: Teacher):
         self.list_courses.append(Course(name, start_date, end_date, teacher))
 

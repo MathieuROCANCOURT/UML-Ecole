@@ -1,13 +1,13 @@
-import datetime
+from datetime import date
 
+from courses import Courses
 from src.user import User
 from src.address import Address
-from datetime import date
 
 
 class Teacher(User):
-    def __init__(self, first_name, last_name, date_of_birth: datetime.date, address: Address,
-                 arrival_date: datetime.date):
+    def __init__(self, first_name, last_name, date_of_birth: date, address: Address,
+                 arrival_date: date):
         super().__init__()
         self.isConnected = True
         self.first_name = first_name
@@ -15,6 +15,7 @@ class Teacher(User):
         self.date_of_birth = date_of_birth
         self.address = address
         self.arrival_date = arrival_date
+        self.list_courses = Courses()
 
     def update_account(self, address: Address):
         self.address = address
@@ -29,3 +30,6 @@ class Teacher(User):
             return gap_year - 1
 
         return gap_year
+
+    def add_course(self):
+        self.list_courses.add_course("Grecque", date(2026, 9, 1), date(2026, 9, 21), self)

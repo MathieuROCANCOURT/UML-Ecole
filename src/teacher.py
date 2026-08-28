@@ -3,7 +3,6 @@ from src.address import Address
 from xmlrpc.client import DateTime
 
 
-
 class Teacher(User):
     def __init__(self, first_name, last_name, date_of_birth: DateTime, address: Address):
         super().__init__()

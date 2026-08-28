@@ -1,7 +1,6 @@
 from src.user import User
 from src.address import Address
 from xmlrpc.client import DateTime
-from src.courses import Courses
 
 
 class Teacher(User):
